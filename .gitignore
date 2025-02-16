@@ -1,0 +1,16 @@
+# Node.js dependencies
+node_modules/
+
+# Build outputs
+dist/
+
+# Database files
+database.sqlite
+
+# Environment variables & sensitive data
+.env
+
+# System/IDE files
+.DS_Store
+.vscode/
+
