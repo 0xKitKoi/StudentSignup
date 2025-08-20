@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^api/save-form$ /var/www/html/club/StudentData.php [NC,L]

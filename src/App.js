@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
+//import qrCode from './qrcode.png';
+
+//const qrCodeUrl = qrCode;
+
 
 function App() {
   const [formData, setFormData] = useState({
@@ -10,8 +14,12 @@ function App() {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const qrCodeUrl = 'res/qrcode.png';  // Signup QR CODE
+  //const qrCodeUrl = '../res/qrcode.png';  // Signup QR CODE
+  //const qrCodeUrl = "/qrcode.png";  // Signup QR CODE
+  //const qrCodeUrl = process.env.PUBLIC_URL + '/res/qrcode.png';
   const linkUrl = 'https://discord.gg/mQ76kE4d5b';  // Club Discord
+  //const qrCodeUrl = process.env.PUBLIC_URL + '/res/qrcode.png';
+
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -24,7 +32,7 @@ function App() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('http://scuzzy.space/api/save-form', {
+      const response = await fetch('https://scuzzy.space/api/save-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,7 +59,7 @@ function App() {
         <div className="inputs-container">
           {submitted ? (
             <div className="qr-section">
-              <img src={qrCodeUrl} alt="QR Code" className="qr-image" />
+              <img src="qrcode.png" alt="QR Code" className="qr-image" />
               <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="qr-link">
                 Join the Clubs Discord!!1!
               </a>

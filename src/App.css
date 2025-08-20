@@ -90,6 +90,7 @@ button:hover {
 }
 
 .qr-image {
+ /*background-image: url('../res/wallpaper.png');*/
   width: 100px;
   height: auto;
 }
